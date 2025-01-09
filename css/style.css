@@ -1,0 +1,396 @@
+/****** General ***********/
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --main-color: #0065FC;
+    --main-bg-color: #F2F2F2;
+    --filter-bg-color: #DEEBFF;
+}
+
+.fa-solid {
+    color: var(--main-color);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px;
+    filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+}
+
+.card img {
+    object-fit: cover;
+}
+
+.card-title {
+    font-size: 16px;
+}
+
+.euro {
+    font-weight: 700;
+}
+
+.neutral-star {
+    color: var(--main-bg-color)
+}
+
+/****** Hebergements And Populaires ***********/
+.hebergements-and-populaires {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hebergements-and-populaires section {
+    background-color: var(--main-bg-color);
+    border-radius: 20px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+/****** Hebergements ***********/
+.hebergements {
+    width: 65%;
+    height: 690px; /*changement code de base à cause de grid pour les cards*/
+}
+
+/****** Populaires ***********/
+.populaires {
+    width: 32%;
+}
+
+.populaires-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.populaires-cards .card {
+    display: flex;
+    margin-top: 33px;
+}
+
+.populaires-cards img {
+    width: 33%;
+    height: 136px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.populaires-cards .card-content {
+    width: 67%;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.populaires-cards .card-title {
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.populaires-cards .card-subtitle {
+    margin: 0;
+}
+
+.populaires-cards .card-rating {
+    margin-bottom: 5px;
+}
+
+/*****Header*****/
+
+.logos {
+    width: 61.09px;
+    height: 19px;
+    gap: 0px;
+    opacity: 0px;
+    padding-top: 30px;    
+}
+
+header {
+    width: 100%;
+    height: 79px;
+    display: flex;  
+    flex-direction: row; 
+    justify-content: space-between;
+    padding: 0px 30px 30px 30px;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none ; /*permet de supprimer les puces devant les mots*/
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+
+ul li {
+    display: inline-block;
+    margin-right: 50px; /*A utiliser pour écarter les deux mots entre eux */
+
+}
+
+ul li a { /*pour faire appliquer les paramètres aux liens à l'intérieur des <li> */
+    text-decoration: none; /*supprime le soulignement par défaut*/
+    color: inherit; /*garde la couleur par défaut du texte */
+    display: inline-block; /* transforme le lien pour qu'il supporte un border*/
+    padding: 5px 0; /* Ajoute un peu d'espace entre le mot et le trait */
+}
+
+
+ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur au survol */
+    color: #0065FC; /*change la couleur en bleu au survol*/
+    border-top: 2px solid #0065FC; /*pour faire le trait au dessus du menu au survol */
+}
+
+/******Destination*****/
+
+.formulaire-destination {
+    display: inline-flex; /* permet à la bordure de n'entourrer que les éléments du conteneur et les aligne horizontalement*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.label-recherche {
+    display: inline-block; 
+    background-color: #f2f2f2; 
+    padding: 10px; 
+    border-radius: 10px;
+
+}
+
+.i-color {
+    color: #000000;
+}
+
+.filter-button {
+
+    color: #0065fc; 
+    padding: 5px; 
+    padding-right: 10px;
+}
+
+.search-button {
+    background-color: #0065FC;
+    color: white;
+    border: none;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    border-end-end-radius: 4px;
+    border-top-right-radius: 4px;
+    cursor: pointer;
+}
+.text-destination {
+    border-right: none;
+    border-left: none;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    border-bottom: 2px solid #F2F2F2;
+    border-top: 2px solid #F2F2F2;
+}
+
+.text-destination::placeholder {
+    color: black;
+    font-weight: bold;
+}
+
+/******Filtres*****/
+
+.filter-button-1 {
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}
+
+.filter-button-2, .filter-button-3, .filter-button-4, .filter-button-5{
+    background-color: white;
+    border: 2px solid #F2F2F2;
+    border-radius: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.filter-button-2:hover{
+    color: black;
+    background-color: #DEEBFF;
+}
+
+.filter-button-3:hover{
+    color: black;
+    background-color: #DEEBFF;
+}
+
+.filter-button-4:hover{
+    color: black;
+    background-color: #DEEBFF;
+}
+
+.filter-button-5:hover{
+    color: black;
+    background-color: #DEEBFF;
+}
+
+.p2{
+    margin-bottom: 40px;
+}
+
+/*******Hébergements*******/
+
+.card-1, .card-2, .card-3,.card-4, .card-5, .card-6 {
+    width: 85%;
+    height: 200px; /*donne une hauteur fixe à chaque card */
+    background-color: white;
+    padding: 5px 5px 15px 5px;
+    border-radius: 20px;
+    margin-top: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.img-hebergement {
+    width: 100%;
+    height: 120px;
+    border-radius: 20px 20px 0px 0px;
+    margin:0px;
+    object-fit: cover;
+}
+
+.nom-hôtel-1, .nom-hôtel-2, .nom-hôtel-3, .nom-hôtel-4, .nom-hôtel-5, .nom-hôtel-6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.p3, .p4, .p5, .p6, .p7, .p8, .stars {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+
+.afficher-plus{
+    position: relative;
+    right: 245%;
+    top: 30px;
+}
+
+
+ /****** changement disposition cards *****/
+
+ .all-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr)
+}
+
+.card-3, .card-4{
+    position: relative;
+    left: 104%;
+    bottom: 500px;
+}
+
+.card-5, .card-6{
+    position: relative;
+    left: 208%;
+    bottom: 1000px;
+}
+
+
+
+/*****Activités*****/
+
+.activités-Marseille {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 35px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.activités-title {
+margin-top: 90px;
+margin-left: 30px;
+margin-bottom: 50px;
+}
+
+.img-act-1, .img-act-3, .img-act-4 {
+    width: 300px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.titre-act-1, .titre-act-2, .titre-act-3, .titre-act-4 {
+    padding-left: 15px;
+}
+
+.vieux-port, .fort-de-pomègue, .calanques, .notre-dame-de-la-garde {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden; /*pour que la photo ne dépasse pas des angles arrondis*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.vieux-port:hover, .fort-de-pomègue:hover, .calanques:hover, .notre-dame-de-la-garde:hover {
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/*****Footer*****/
+
+.footer{
+    display: grid;
+    grid-template-columns: 400px 400px 400px;
+    background-color: #F2F2F2;
+    padding-bottom: 10px;
+}
+
+.à-propos, .nos-hébergements, .assistance {
+    padding-left: 20px;
+}
+
+.nos-hébergements {
+    padding-left: 80px;
+}
+
+.assistance {
+    padding-left: 100px;
+}
+
+.p9, .p10, .p11, .p12, .p13, .p14 {
+    cursor: pointer;
+}
+
+.p9:hover, .p10:hover, .p11:hover, .p12:hover, .p13:hover, .p14:hover {
+    color: #0065FC;
+}
