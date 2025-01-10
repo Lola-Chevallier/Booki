@@ -54,6 +54,7 @@ a {
     color: var(--main-bg-color)
 }
 
+
 /****** Hebergements And Populaires ***********/
 .hebergements-and-populaires {
     display: flex;
@@ -67,11 +68,12 @@ a {
     box-sizing: border-box;
 }
 
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
-    height: 690px; /*changement code de base à cause de grid pour les cards*/
 }
+
 
 /****** Populaires ***********/
 .populaires {
@@ -118,13 +120,12 @@ a {
     margin-bottom: 5px;
 }
 
+
 /*****Header*****/
 
 .logos {
     width: 61.09px;
     height: 19px;
-    gap: 0px;
-    opacity: 0px;
     padding-top: 30px;    
 }
 
@@ -168,6 +169,7 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     border-top: 2px solid #0065FC; /*pour faire le trait au dessus du menu au survol */
 }
 
+
 /******Destination*****/
 
 .formulaire-destination {
@@ -186,13 +188,6 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
 
 .i-color {
     color: #000000;
-}
-
-.filter-button {
-
-    color: #0065fc; 
-    padding: 5px; 
-    padding-right: 10px;
 }
 
 .search-button {
@@ -220,6 +215,16 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     font-weight: bold;
 }
 
+.info-logement {
+    color: #0065fc; 
+    border: 2px solid #f2f2f2; 
+    border-radius: 50%; 
+    padding: 8px; 
+    padding-bottom: 12px; 
+    align-items: center;
+}
+
+
 /******Filtres*****/
 
 .filter-button-1 {
@@ -228,7 +233,15 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     font-weight: bold;
 }
 
-.filter-button-2, .filter-button-3, .filter-button-4, .filter-button-5{
+.filter-button-logo {
+
+    color: #0065fc; 
+    padding: 5px; 
+    padding-right: 10px;
+    
+}
+
+.filter-button {
     background-color: white;
     border: 2px solid #F2F2F2;
     border-radius: 20px;
@@ -238,22 +251,7 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     cursor: pointer;
 }
 
-.filter-button-2:hover{
-    color: black;
-    background-color: #DEEBFF;
-}
-
-.filter-button-3:hover{
-    color: black;
-    background-color: #DEEBFF;
-}
-
-.filter-button-4:hover{
-    color: black;
-    background-color: #DEEBFF;
-}
-
-.filter-button-5:hover{
+.filter-button:hover{
     color: black;
     background-color: #DEEBFF;
 }
@@ -262,11 +260,22 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     margin-bottom: 40px;
 }
 
+
 /*******Hébergements*******/
 
-.card-1, .card-2, .card-3,.card-4, .card-5, .card-6 {
-    width: 85%;
-    height: 200px; /*donne une hauteur fixe à chaque card */
+.all-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+}
+
+.card-heb {
+    flex: 0 0 32%;
+    box-sizing: border-box;
+    height: 230px; /*donne une hauteur fixe à chaque card */
     background-color: white;
     padding: 5px 5px 15px 5px;
     border-radius: 20px;
@@ -275,7 +284,7 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     cursor: pointer;
 }
 
-.card-1:hover, .card-2:hover, .card-3:hover, .card-4:hover, .card-5:hover, .card-6:hover {
+.card-heb:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
 
@@ -287,7 +296,7 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     object-fit: cover;
 }
 
-.nom-hôtel-1, .nom-hôtel-2, .nom-hôtel-3, .nom-hôtel-4, .nom-hôtel-5, .nom-hôtel-6 {
+.name-hôtel {
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: bold;
@@ -300,32 +309,16 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     padding-left: 10px;
 }
 
-.afficher-plus{
+.last-star {
+    color: #f2f2f2;
+}
+
+.afficher-plus {
     position: relative;
-    right: 245%;
-    top: 30px;
+    right: 550px;
+    top: 35px;
+    cursor: pointer;
 }
-
-
- /****** changement disposition cards *****/
-
- .all-cards{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr)
-}
-
-.card-3, .card-4{
-    position: relative;
-    left: 104%;
-    bottom: 500px;
-}
-
-.card-5, .card-6{
-    position: relative;
-    left: 208%;
-    bottom: 1000px;
-}
-
 
 
 /*****Activités*****/
@@ -338,19 +331,19 @@ ul li a:hover { /*utiliser hover pour que les mots devienent d'une autre couleur
     margin-bottom: 30px;
 }
 
-.activités-title {
-margin-top: 90px;
-margin-left: 30px;
-margin-bottom: 50px;
+.activity-title {
+    margin-top: 90px;
+    margin-left: 30px;
+    margin-bottom: 50px;
 }
 
-.img-act-1, .img-act-3, .img-act-4 {
+.img-act {
     width: 300px;
     height: 450px;
     object-fit: cover;
 }
 
-.titre-act-1, .titre-act-2, .titre-act-3, .titre-act-4 {
+.title-act {
     padding-left: 15px;
 }
 
@@ -365,6 +358,7 @@ margin-bottom: 50px;
 .vieux-port:hover, .fort-de-pomègue:hover, .calanques:hover, .notre-dame-de-la-garde:hover {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
 }
+
 
 /*****Footer*****/
 
